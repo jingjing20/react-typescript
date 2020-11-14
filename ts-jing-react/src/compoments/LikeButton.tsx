@@ -5,7 +5,8 @@ export const LikeButton: React.FC = () => {
   const [swith, setSwith] = useState(true);
   useEffect(() => {
     document.title = `你点击了${like}`
-  })
+    console.log('document title effect is runing');
+  },[like])
   return (
     <>
       <button onClick={() => { setLike(like + 1) }}>
