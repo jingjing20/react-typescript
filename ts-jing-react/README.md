@@ -9,3 +9,7 @@
 
 - React 会在每次组件渲染的时候执行 Effect。每次组件卸载的时候清除 Effect。
 - React 会在执行当前 Effect 之前清除上一个 Effect。 
+
+### 自定义 hooks
+
+- 自定义 hook 函数名称必须以 use 开头才能被 react 识别

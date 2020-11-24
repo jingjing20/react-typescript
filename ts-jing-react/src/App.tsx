@@ -3,10 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import { HelloWord } from './compoments/HelloWord';
 import { LikeButton } from './compoments/LikeButton';
-import MouseTracker from './compoments/MouseTracker'
+import MouseTracker from './compoments/MouseTracker';
+import useMousePosition from './hooks/useMousePosition';
 
 function App() {
   const [show, setShow] = useState(true);
+  const position = useMousePosition();
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <p>X: {position.x}, Y : {position.y}</p>
         <HelloWord message="jingjing"></HelloWord>
         <LikeButton></LikeButton>
         <button onClick={() => { setShow(!show) }}>Trigger Button</button>
